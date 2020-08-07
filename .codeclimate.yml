@@ -1,0 +1,56 @@
+version: "2"
+checks:
+  return-statements:
+    config:
+      threshold: 7
+plugins:
+  sonar-java:
+    enabled: true
+    config:
+      sonar.java.source: "11"
+      tests_patterns:
+        - src/test/java/**
+      minimum_severity: info
+  pmd:
+    enabled: true
+    config:
+      rules:
+        - "java-basic"
+        - "java-braces"
+        - "java-clone"
+        - "java-comments"
+        - "java-coupling"
+        - "java-design"
+        - "java-empty"
+        - "java-finalizers"
+        - "java-imports"
+        - "java-junit"
+        - "java-naming"
+        - "java-migrating"
+        - "java-optimizations"
+        - "java-typeresolution"
+        - "java-strictexception"
+        - "java-strings"
+        - "java-unnecessary"
+        - "java-unusedcode"
+    checks:
+      LawOfDemeter:
+        enabled: false
+      AvoidInstantiatingObjectsInLoops:
+        enabled: false
+      LongVariable:
+        enabled: false
+      ShortVariable:
+        enabled: false
+      ShortMethodName:
+        enabled: false
+  fixme:
+    enabled: true
+    issue_override:
+      severity: minor
+    config:
+      strings:
+        - FIXME
+        - TODO
+        - fixme
+        - todo
