@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo MVC</title>
+
+    <script type="text/html" id="listItem">
+        <div class="todos-list_item">
+            <div class="custom-checkbox todos-list_item_ready-marker">
+                <input aria-label="Mark task as done" class="custom-checkbox_target" type="checkbox"/>
+                <div class="custom-checkbox_visual">
+                    <div class="custom-checkbox_visual_icon"></div>
+                </div>
+            </div>
+            <button aria-label="Delete task" class="custom-delete-button todos-list_item_remove"></button>
+            <div class="todos-list_item_text-w">
+                <div contenteditable="true" class="todos-list_item_text">{text}</div>
+            </div>
+        </div>
+    </script>
+
+    <link th:href="@{/styles/default.css}" rel="stylesheet" />
+</head>
+
+<body>
+
+<div class="main-layout">
+
+    <h1 class="todo-title">Todos</h1>
+
+    <!--<div class="todo-board __has-content">-->
+        <div class="todo-board ">
+
+        <form class="todo-creator jsTodoCreator">
+            <button aria-label="Check all items as done" class="todo-creator_check-all jsTodoCheckAllAsDone"></button>
+            <div class="todo-creator_text-input-w">
+                <input aria-label="Input new todo text" name="task-description" class="todo-creator_text-input jsTodoText"
+                       placeholder="What needs to be done?" type="text"/>
+            </div>
+        </form>
+
+        <div class="todos-list jsTodoList">
+
+        </div>
+
+        <div class="todos-toolbar ">
+            <div aria-label="Counter of available tasks" class="todos-toolbar_unready-counter">0 items left</div>
+            <div class="filters todos-toolbar_filters">
+                <button aria-label="Filter: All, is selected" class="filters-item-all __selected">All</button>
+                <button aria-label="Filter: Active" class="filters-item-active">Active</button>
+                <button aria-label="Filter: Completed" class="filters-item-completed">Completed</button>
+            </div>
+            <button class="todos-toolbar_clear-completed">Clear completed</button>
+        </div>
+
+    </div>
+</div>
+
+<script type="module" th:src="@{/js/everythinginonefile.js}"></script>
+
+</body>
+</html>

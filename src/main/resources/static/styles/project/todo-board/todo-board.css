@@ -1,0 +1,46 @@
+.todo-board {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    position: relative;
+    margin-top: -15px;
+}
+
+.todo-board:before,
+.todo-board:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    z-index: -1;
+}
+
+.todo-board.__has-content:before,
+.todo-board.__has-content:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    z-index: -1;
+}
+
+.todo-board:before {
+    left: 8px;
+    right: 8px;
+    height: 8px;
+}
+
+.todo-board:after {
+    left: 4px;
+    right: 4px;
+    height: 4px;
+}
+
+.todo-board .todos-list,
+.todo-board .todos-toolbar {
+    display: none;
+}
+
+.todo-board.__has-content .todos-list,
+.todo-board.__has-content .todos-toolbar {
+    display: block;
+}
