@@ -2,6 +2,7 @@ plugins {
     java
     id("org.springframework.boot") version "2.3.2.RELEASE"
     id("io.spring.dependency-management") version "1.0.9.RELEASE"
+    jacoco
 }
 
 group = "com.github.akilovich"
@@ -23,4 +24,12 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        xml.isEnabled = true
+        xml.destination = file("target/site/jacoco/jacoco.xml")
+    }
 }
