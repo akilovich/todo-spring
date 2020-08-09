@@ -1,0 +1,16 @@
+.custom-delete-button {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: url("../../../images/close.png") no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 120dpi),
+(min-resolution: 1.5dppx) {
+  .custom-delete-button {
+    background: url(../../../images/close@2x.png) no-repeat 0 0;
+  }
+}

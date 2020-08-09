@@ -1,0 +1,67 @@
+.todo-creator {
+    padding: 20px 20px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.todo-creator:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.todo-creator_check-all {
+    float: left;
+    margin-right: 20px;
+    margin-top: 11px;
+    margin-left: 2px;
+    padding: 0;
+    width: 24px;
+    height: 12px;
+    border: none;
+    outline: none;
+    background: url(../../../images/select-all.png) no-repeat 0 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 120dpi),
+(min-resolution: 1.5dppx) {
+    .todo-creator_check-all {
+        background: url(../../../images/select-all@2x.png) no-repeat 0 0;
+    }
+}
+
+.todo-creator_text-input-w {
+    overflow: hidden;
+}
+
+.todo-creator_text-input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    /*box-sizing: border-box;*/
+    font-size: 24px;
+    color: #666;
+    font-weight: 100;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.todo-creator_text-input::-webkit-input-placeholder {
+    font-style: italic;
+    color: #ccc;
+}
+
+.todo-creator_text-input:-moz-placeholder {
+    font-style: italic;
+    color: #ccc;
+}
+
+.todo-creator_text-input::-moz-placeholder {
+    font-style: italic;
+    color: #ccc;
+}
+
+.todo-creator_text-input:-ms-input-placeholder {
+    font-style: italic;
+    color: #ccc;
+}

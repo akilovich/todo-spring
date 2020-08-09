@@ -1,0 +1,98 @@
+.todos-toolbar {
+  width: 100%;
+  border: 20px;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+}
+
+.todo-toolbar:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.todos-toolbar_unready-counter {
+  float: left;
+  width: 30%;
+  margin: 12px;
+  font-size: 15px;
+  color: #444;
+  font-weight: 100;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.todos-toolbar_filters {
+  float: left;
+  width: 40%;
+  border: 0;
+  padding: 0;
+  margin: 12px;
+}
+
+.filters-item-all {
+  font-weight: 100;
+  font-size: 15px;
+  color: #444;
+  background: #fff;
+  border: none;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0 5px;
+}
+.filters-item-all:hover {
+  text-decoration: underline;
+}
+
+.filters-item-active {
+  font-weight: 100;
+  font-size: 15px;
+  color: #444;
+  background: #fff;
+  border: none;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0 5px;
+}
+
+.filters-item-active:hover {
+text-decoration: underline;
+}
+
+.filters-item-completed {
+  font-weight: 100;
+  font-size: 15px;
+  color: #444;
+  background: #fff;
+  border: none;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0 5px;
+}
+
+.filters-item-completed:hover {
+  text-decoration: underline;
+}
+//.filters-item.__selected {
+//  border: 1px solid #ddd;
+//  border-radius: 10%;
+//}
+
+.__selected {
+  border: 1px solid #ddd;
+  border-radius: 10%;
+}
+
+.todos-toolbar_clear-completed {
+  float: right;
+  overflow: hidden;
+  font-size: 15px;
+  color: #444;
+  margin: 12px;
+  border: 0;
+  font-weight: 100;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #fff;
+}
+
+.todos-toolbar_clear-completed:hover {
+  text-decoration: underline;
+}
